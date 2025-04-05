@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourName | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-bg {
+            background-image: url('https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-['Inter']">
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-4 sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-bold text-2xl">YourName</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="hover:underline">Home</a></li>
+                <li><a href="about.html" class="hover:underline">About</a></li>
+                <li><a href="portfolio.html" class="hover:underline">Portfolio</a></li>
+                <li><a href="contact.html" class="hover:underline">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-2xl">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Creative Solutions for Modern Challenges</h1>
+            <p class="text-xl md:text-2xl mb-8">Full-Stack Developer | UX/UI Designer | Innovation Enthusiast</p>
+            <div class="flex justify-center space-x-4">
+                <a href="portfolio.html" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg font-medium transition duration-300">View Work</a>
+                <a href="contact.html" class="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-lg font-medium transition duration-300">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-Commerce Platform</h3>
+                        <p class="text-gray-600">Full-stack e-commerce solution with React and Node.js</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mobile App UI</h3>
+                        <p class="text-gray-600">Fitness tracking app with custom illustrations</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dashboard Design</h3>
+                        <p class="text-gray-600">Analytics dashboard with real-time data visualization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-2xl hover:text-gray-300 transition duration-300"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-2xl hover:text-pink-500 transition duration-300"><i class="fab fa-dribbble"></i></a>
+            </div>
+            <p>&copy; 2023 YourName. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
