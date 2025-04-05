@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | YourName Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .filter-btn.active {
+            background-color: #3B82F6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-['Inter']">
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-4 sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-bold text-2xl">YourName</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="hover:underline">Home</a></li>
+                <li><a href="about.html" class="hover:underline">About</a></li>
+                <li><a href="portfolio.html" class="hover:underline font-medium">Portfolio</a></li>
+                <li><a href="contact.html" class="hover:underline">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-2xl">☰</button>
+        </nav>
+    </header>
+
+    <!-- Portfolio Gallery -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-4">My Work</h1>
+            <p class="text-xl text-center text-gray-600 mb-12">A selection of my recent projects</p>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn active px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-500 hover:text-white transition" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-500 hover:text-white transition" data-filter="web">Web Dev</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-500 hover:text-white transition" data-filter="ui">UI/UX</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-500 hover:text-white transition" data-filter="fullstack">Full Stack</button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card rounded-lg overflow-hidden shadow-lg bg-white" data-category="web">
+                    <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg" alt="E-Commerce Platform" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">E-Commerce Platform</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Web Dev</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Modern e-commerce solution with React and Node.js backend</p>
+                        <button class="view-details-btn text-blue-500 hover:text-blue-700 font-medium" data-project="1">
+                            View Details →
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card rounded-lg overflow-hidden shadow-lg bg-white" data-category="ui">
+                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="Mobile App UI" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Fitness App UI</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">UI/UX</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Mobile fitness tracking application with custom illustrations</p>
+                        <button class="view-details-btn text-blue-500 hover:text-blue-700 font-medium" data-project="2">
+                            View Details →
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card rounded-lg overflow-hidden shadow-lg bg-white" data-category="fullstack">
+                    <img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg" alt="Dashboard Design" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Analytics Dashboard</h3>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Full Stack</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Real-time data visualization with React and D3.js</p>
+                        <button class="view-details-btn text-blue-500 hover:text-blue-700 font-medium" data-project="3">
+                            View Details →
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card rounded-lg overflow-hidden shadow-lg bg-white" data-category="web">
+                    <img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg" alt="Travel Blog" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Travel Blog</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Web Dev</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Next.js blog with content management system</p>
+                        <button class="view-details-btn text-blue-500 hover:text-blue-700 font-medium" data-project="4">
+                            View Details →
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card rounded-lg overflow-hidden shadow-lg bg-white" data-category="ui">
+                    <img src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg" alt="Banking App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Banking App</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">UI/UX</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Mobile banking interface with dark/light mode</p>
+                        <button class="view-details-btn text-blue-500 hover:text-blue-700 font-medium" data-project="5">
+                            View Details →
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card rounded-lg overflow-hidden shadow-lg bg-white" data-category="fullstack">
+                    <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Project Management" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Project Management</h3>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Full Stack</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Team collaboration tool with real-time updates</p>
+                        <button class="view-details-btn text-blue-500 hover:text-blue-700 font-medium" data-project="6">
+                            View Details →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4" id="projectModal">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="relative">
+                <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl" id="closeModal">&times;</button>
+                <img src="" alt="Project Image" class="w-full h-64 object-cover" id="modalImage">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2" id="modalTitle"></h2>
+                    <span class="inline-block px-2 py-1 rounded text-xs mb-4" id="modalCategory"></span>
+                    <p class="text-gray-700 mb-6" id="modalDescription"></p>
+                    <div class="mb-6">
+                        <h3 class="font-bold mb-2">Technologies Used:</h3>
+                        <div class="flex flex-wrap gap-2" id="modalTechs"></div>
+                    </div>
+                    <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition" id="modalLink">Visit Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-2xl hover:text-gray-300 transition duration-300"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-2xl hover:text-pink-500 transition duration-300"><i class="fab fa-dribbble"></i></a>
+            </div>
+            <p>&copy; 2023 YourName. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active state
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('projectModal');
+        const closeModal = document.getElementById('closeModal');
+        const viewButtons = document.querySelectorAll('.view-details-btn');
+        
+        // Project data
+        const projects = {
+            1: {
+                title: "E-Commerce Platform",
+                category: "Web Dev",
+                categoryClass: "bg-blue-100 text-blue-800",
+                image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg",
+                description: "A full-featured e-commerce platform built with React for the frontend and Node.js with Express for the backend. The platform includes product listings, shopping cart functionality, user authentication, and payment processing integration.",
+                techs: ["React", "Node.js", "MongoDB", "Stripe API", "Redux"],
+                link: "#"
+            },
+            2: {
+                title: "Fitness App UI",
+                category: "UI/UX",
+                categoryClass: "bg-green-100 text-green-800",
+                image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg",
+                description: "Mobile fitness tracking application designed with a focus on user experience. Created custom illustrations and animations to enhance engagement. Implemented dark/light mode and accessibility features.",
+                techs: ["Figma", "Adobe Illustrator", "Lottie Animations", "iOS Human Interface"],
+                link: "#"
+            },
+            3: {
+                title: "Analytics Dashboard",
+                category: "Full Stack",
+                categoryClass: "bg-purple-100 text-purple-800",
+                image: "https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg",
+                description: "Enterprise analytics dashboard with real-time data visualization capabilities. Built with React and D3.js for the frontend visualizations, and a Python backend for data processing. Features include custom report generation and data export functionality.",
+                techs: ["React", "D3.js", "Python", "Flask", "PostgreSQL"],
+                link: "#"
+            },
+            4: {
+                title: "Travel Blog",
+                category: "Web Dev",
+                categoryClass: "bg-blue-100 text-blue-800",
+                image: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg",
+                description: "Travel blog built with Next.js for optimal SEO performance. Integrated with a headless CMS for content management. Features include location-based filtering, interactive maps, and social sharing capabilities.",
+                techs: ["Next.js", "Contentful CMS", "Mapbox", "Tailwind CSS"],
+                link: "#"
+            },
+            5: {
+                title: "Banking App",
+                category: "UI/UX",
+                categoryClass: "bg-green-100 text-green-800",
+                image: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg",
+                description: "Mobile banking application interface designed with security and ease of use in mind. Created a comprehensive design system with reusable components. Implemented biometric authentication flows and transaction history visualization.",
+                techs: ["Figma", "Adobe XD", "iOS/Android Guidelines", "Prototyping"],
+                link: "#"
+            },
+            6: {
+                title: "Project Management",
+                category: "Full Stack",
+                categoryClass: "bg-purple-100 text-purple-800",
+                image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+                description: "Team collaboration tool with real-time updates and notifications. Features include task management, file sharing, team chat, and progress tracking. Built with React for the frontend and Node.js with Socket.io for real-time functionality.",
+                techs: ["React", "Node.js", "Socket.io", "MongoDB", "AWS S3"],
+                link: "#"
+            }
+        };
+
+        viewButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const projectId = button.getAttribute('data-project');
+                const project = projects[projectId];
+                
+                document.getElementById('modalImage').src = project.image;
+                document.getElementById('modalTitle').textContent = project.title;
+                document.getElementById('modalCategory').textContent = project.category;
+                document.getElementById('modalCategory').className = `inline-block px-2 py-1 rounded text-xs mb-4 ${project.categoryClass}`;
+                document.getElementById('modalDescription').textContent = project.description;
+                document.getElementById('modalLink').href = project.link;
+                
+                const techsContainer = document.getElementById('modalTechs');
+                techsContainer.innerHTML = '';
+                project.techs.forEach(tech => {
+                    const techSpan = document.createElement('span');
+                    techSpan.className = 'bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm';
+                    techSpan.textContent = tech;
+                    techsContainer.appendChild(techSpan);
+                });
+                
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        });
+    </script>
+</body>
+</html>
