@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | YourName Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .form-input:focus {
+            box-shadow: 0 0 0 2px #3B82F6;
+        }
+        .form-error {
+            border-color: #EF4444;
+        }
+        .form-success {
+            border-color: #10B981;
+        }
+    </style>
+</head>
+<body class="font-['Inter']">
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-4 sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-bold text-2xl">YourName</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="hover:underline">Home</a></li>
+                <li><a href="about.html" class="hover:underline">About</a></li>
+                <li><a href="portfolio.html" class="hover:underline">Portfolio</a></li>
+                <li><a href="contact.html" class="hover:underline font-medium">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-2xl">☰</button>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">Get In Touch</h1>
+                <p class="text-xl text-gray-600">Have a project in mind or want to collaborate? Send me a message!</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-12">
+                <!-- Contact Form -->
+                <div class="md:w-2/3">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
+                                placeholder="Your name">
+                            <p class="text-red-500 text-sm mt-1 hidden" id="nameError">Please enter your name</p>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
+                                placeholder="your.email@example.com">
+                            <p class="text-red-500 text-sm mt-1 hidden" id="emailError">Please enter a valid email</p>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
+                                placeholder="What's this about?">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition"
+                                placeholder="Your message here..."></textarea>
+                            <p class="text-red-500 text-sm mt-1 hidden" id="messageError">Please enter your message</p>
+                        </div>
+
+                        <button type="submit" id="submitBtn"
+                            class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+                            <span id="submitText">Send Message</span>
+                            <svg id="submitSpinner" class="hidden animate-spin ml-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        </button>
+
+                        <div id="formSuccess" class="hidden p-4 bg-green-100 text-green-800 rounded-lg">
+                            <i class="fas fa-check-circle mr-2"></i> Your message has been sent successfully!
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="md:w-1/3">
+                    <div class="bg-gray-50 p-6 rounded-lg h-full">
+                        <h2 class="text-xl font-bold mb-6">Contact Information</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-blue-500 text-xl mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-gray-800">Email</h3>
+                                    <p class="text-gray-600">hello@yourname.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="text-blue-500 text-xl mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-gray-800">Phone</h3>
+                                    <p class="text-gray-600">+1 (123) 456-7890</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="text-blue-500 text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-gray-800">Location</h3>
+                                    <p class="text-gray-600">San Francisco, CA</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h3 class="font-medium text-gray-800 mb-4">Follow Me</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-600 hover:text-blue-500 text-2xl transition">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-gray-800 text-2xl transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-pink-500 text-2xl transition">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-blue-400 text-2xl transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-2xl hover:text-gray-300 transition duration-300"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-2xl hover:text-pink-500 transition duration-300"><i class="fab fa-dribbble"></i></a>
+            </div>
+            <p>&copy; 2023 YourName. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form elements
+            const form = e.target;
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const submitBtn = document.getElementById('submitBtn');
+            const submitText = document.getElementById('submitText');
+            const submitSpinner = document.getElementById('submitSpinner');
+            const formSuccess = document.getElementById('formSuccess');
+            
+            // Reset error states
+            document.querySelectorAll('.form-error').forEach(el => {
+                el.classList.remove('form-error');
+            });
+            document.querySelectorAll('[id$="Error"]').forEach(el => {
+                el.classList.add('hidden');
+            });
+            
+            // Validate form
+            let isValid = true;
+            
+            if (!nameInput.value.trim()) {
+                nameInput.classList.add('form-error');
+                document.getElementById('nameError').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (!emailInput.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+                emailInput.classList.add('form-error');
+                document.getElementById('emailError').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (!messageInput.value.trim()) {
+                messageInput.classList.add('form-error');
+                document.getElementById('messageError').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (!isValid) return;
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitText.textContent = 'Sending...';
+            submitSpinner.classList.remove('hidden');
+            
+            // Simulate form submission (in a real app, you would use fetch/axios here)
+            setTimeout(() => {
+                // Hide loading state
+                submitBtn.disabled = false;
+                submitText.textContent = 'Send Message';
+                submitSpinner.classList.add('hidden');
+                
+                // Show success message
+                formSuccess.classList.remove('hidden');
+                form.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formSuccess.classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
